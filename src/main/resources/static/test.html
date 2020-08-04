@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test.html</title>
+</head>
+<body>
+    <p>/templates下的资源默认不会被spring boot扫到，故<b>无法</b>直接从浏览器访问</p>
+    <p>/static下的资源默认<b>可以</b>从浏览器直接访问</p>
+    <hr>
+    <p><i>此页面访问地址：http://localhost:8080/test.html</i></p>
+    <p>Spring Boot自动配置中spring.resources.static-locations的默认值：</p>
+    <p><b>classpath:/META-INF/resources/</b>, <b>classpath:/resources/</b>, <b>classpath:/static/</b>, <b>classpath:/public/</b></p>
+</body>
+</html>

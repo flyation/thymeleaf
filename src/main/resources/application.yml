@@ -1,0 +1,6 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/   # default   important!
+    suffix: .html                   # default   important!
+    mode: HTML5                     # default: HTML
+    encoding: UTF-8                 # default
