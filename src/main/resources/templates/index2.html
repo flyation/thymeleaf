@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- 引入thymeleaf标签 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>两种取值模板</p>
+    <p th:text="'姓名是：' + ${name}"></p>
+    <p th:text="|姓名是：${name}|"></p>
+    <hr>
+    <p>th:utext会解析html标签，而th:text不会</p>
+    <p th:if="${flag == true}" th:utext="|if：条件<b>成立</b>时显示内容|"></p>
+    <p th:unless="${flag != true}" th:utext="|unless：条件<b>不成立</b>时显示内容|"></p>
+    <hr>
+    <a th:href="'https://www.' + ${path}">超链接</a>
+    <hr>
+    <img th:src="${src}">
+    <hr>
+    <input th:value="${age gt 30 ? '中年' : '青年'}">
+    <hr>
+    <div th:switch="${gender}">
+        <p th:case="male">男</p>
+        <p th:case="female">女</p>
+        <p th:case="*">不知道</p>
+    </div>
+</body>
+</html>

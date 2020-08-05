@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- 引入thymeleaf标签 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- 日期格式化 -->
+    <p th:text="${#dates.format(date, 'yyyy-MM-dd HH:mm:ss')}"></p>
+    <!-- 创建日期，精确到天 -->
+    <p th:text="${#dates.createNow()}"></p>
+    <!-- 创建日期，精确到秒 -->
+    <p th:text="${#dates.createToday()}"></p>
+    <!-- 集合判空 -->
+    <p th:text="${#lists.isEmpty(users)}"></p>
+    <!-- 字符串判空 -->
+    <p th:text="${#strings.isEmpty(name)}"></p>
+    <!-- 字符串长度 -->
+    <p th:text="${#strings.length(name)}"></p>
+    <!-- 拼接字符串 -->
+    <p th:text="${#strings.concat(name, name, name)}"></p>
+    <!-- 生成随机字符串（根据指定的长度） -->
+    <p th:text="${#strings.randomAlphanumeric(count)}"></p>
+</body>
+</html>
